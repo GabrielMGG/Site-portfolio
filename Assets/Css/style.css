@@ -40,6 +40,7 @@ body {
 /* ===============================
    Tamanhos de fontes
 ================================== */
+/*antes de enviar o trabalho ver se estou usando mesmo isso*/
 h1 { font-size: 6rem; text-transform: uppercase; }
 h2 { font-size: 5.5rem; }
 h3 { font-size: 5rem; }
@@ -51,7 +52,7 @@ h6 { font-size: 3.5rem; }
    Menu e Cabeçalho
 ================================== */
 .menu {
-  position: fixed; /* mantem o menu(cabeççalho) fixado na pagina*/
+  position: fixed; /* mantem o menu(cabeçalho) fixado na pagina*/
   top: 0;
   left: 0;
   right: 0;
@@ -73,7 +74,6 @@ Parte do codigo das configuraçoes da logo
 .logo{
     margin-left: 30px; /* aqui vai manter a minha logo afastada do lado esquerdo*/
 }
-
 
 /*Modificaçoes do tamanho da minha logo*/
 .img-circular {
@@ -159,6 +159,11 @@ termina a linha da animação do link
   background-size: cover;
   background-position: center;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  margin-top: 1rem;
 }
 
 /* ===============================
@@ -280,15 +285,30 @@ Acima context-text faz as configurações do titulo, texto e da lista que ficam 
 /* ===============================
    Seção Habilidades
 ================================== */
-/*daqui pra baixo nao sei se ta funcionando, lembrar de verificar se a grid ta pegando ou não, a img tambem nao esta aparecendo*/
-content-skill{
+/*Por favor nao esqueça de colocar . quando for referenciar a classe gabriel*/
+.content-skill{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     height: 100vh;
+
+}
+ .text-skill{
+  display: flex;
+  flex-flow: column wrap;
+  margin: 10rem;
+  
+}
+.text-skill h2{
+  font-size: 4.8rem;
+}
+.img-left{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content:center;
 
 }
 
 .img-left img{
-  width: 100%;
+  width: 70%;
   height: auto;
 }
