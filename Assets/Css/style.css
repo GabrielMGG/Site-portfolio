@@ -131,8 +131,8 @@ termina a linha da animação do link
 /* ===============================
    Conteúdo principal
 ================================== */
-.section-project, .section-about {
-  scroll-margin-top: 5rem; /* Adiciona um espaço  acima da seção quando clicar na ancora que leva a seçao da pagina33333333 */
+.section-project, .section-about, .section-skill {
+  scroll-margin-top: 5rem; /* Adiciona um espaço  acima da seção quando clicar na ancora que leva a seçao da pagina*/
 }
 .main-content {
   max-width: 120rem;
@@ -153,6 +153,12 @@ termina a linha da animação do link
   justify-content: center; 
   align-items: center;
   padding: 0 4.8rem;
+}
+.section-skill{
+  background-image: url(../imagens/backgroundVirado.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
 
 /* ===============================
@@ -226,6 +232,8 @@ termina a linha da animação do link
   transition: transform 0.3s ease; /* Adiciona uma transição suave para um possível efeito de hover (nao sei se vou usar????? $$$Nao esquece em$$$$)*/
 }
 .project-img img:hover{
+
+  color: azure;/*nao ta funcionando so coloquei pra sair o erro*/
   /*depois tentar fazer a animaçao da imagem aumentar*/
 }
 .icons-project a img{
@@ -267,4 +275,20 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
 }
 /*===============================================================================
 Acima context-text faz as configurações do titulo, texto e da lista que ficam na grid seção projeto
-================================================================================*/
+=================================================================================*/
+
+/* ===============================
+   Seção Habilidades
+================================== */
+/*daqui pra baixo nao sei se ta funcionando, lembrar de verificar se a grid ta pegando ou não, a img tambem nao esta aparecendo*/
+content-skill{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+
+}
+
+.img-left img{
+  width: 100%;
+  height: auto;
+}
