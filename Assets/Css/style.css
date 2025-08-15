@@ -23,7 +23,6 @@ html {
   font-size: 62.5%; /* 1rem = 10 px*/
 }
 
-
 body {
   /*<a href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/">Free SVG Backgrounds and Patterns by SVGBackgrounds.com</a>*/
 background-color: #FFFFFF;
@@ -37,8 +36,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     "CRSV" 0,
     "SHRP" 0;
 }
-  
-
 /* ===============================
    Tamanhos de fontes
 ================================== */
@@ -69,29 +66,24 @@ h6 { font-size: 3.5rem; }
   padding: 10px 30px; 
   overflow-x: hidden; /* Impede que o conteúdo transborde horizontalmente e oculta caso ultrapasse */
 }
-
 /*Parte do codigo das configuraçoes da logo*/
 .logo{
     margin-left: 30px; /* aqui vai manter a minha logo afastada do lado esquerdo*/
 }
-
 /*Modificaçoes do tamanho da minha logo*/
 .img-circular {
   width:30%;
   height: 100%;
 }
 /*Fim parte do codigo das configuraçoes da logo*/
-
 nav{
     margin-left: auto;
 }
-
 nav ul {
   display: flex;
   list-style: none;
   gap: var(--gap);
 }
-
 nav a {
   display: inline-block;
   text-decoration: none;
@@ -101,7 +93,6 @@ nav a {
   font-size: 1.8rem;
   text-transform: uppercase;
 }
-
 /*Animação e criação da linha dos link no menu*/
 nav a::after{
   content:'';
@@ -113,7 +104,6 @@ nav a::after{
   background: var(--second-color);
   transition: all 300ms ease-in-out;
 }
-
 nav a:hover::after {
   width: 100%;
   left: 0;
@@ -123,7 +113,7 @@ nav a:hover::after {
 /* ===============================
    Conteúdo principal
 ================================== */
-.section-project, .section-about, .section-skill{
+.section-project, .section-about, .section-skill, .section-contact{
   scroll-margin-top: 5rem; /* Adiciona um espaço  acima da seção quando clicar na ancora que leva a seçao da pagina*/
 }
 .main-content {
@@ -214,7 +204,6 @@ nav a:hover::after {
   border: none;
   box-shadow: 0  0.5rem 0.5rem var(--second-color);
 }
-
 .intro-text button a {
   font-size: 2rem;
   padding: 1rem;
@@ -248,6 +237,7 @@ nav a:hover::after {
 }
 .sobre-text p{
   font-size: 2rem;
+  font-weight: 300;
   text-align: justify;
   line-height: 1.5;
 }
@@ -354,7 +344,7 @@ Acima context-text faz as configurações do titulo, texto e da lista que ficam 
     height: 100vh;
 
 }
- .text-skill{
+.text-skill{
   display: flex;
   flex-flow: column wrap;
   margin: 10rem;
@@ -423,16 +413,16 @@ Acima context-text faz as configurações do titulo, texto e da lista que ficam 
   text-align: center;
   text-transform: uppercase;
 }
-.title-p span h2::after{
+.title-p h2::after{
   content: '';
   position: absolute;
-  top: 12rem;
-  height: 0.5rem;
-  width: 4rem;
-  background: var(--second-color);
+  top: 10rem;
+  height: 0.7rem;
+  width: 40rem;
+  background: var(--primary-color);
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 .title-p p{
   font-size: 2rem;
@@ -503,7 +493,50 @@ Acima context-text faz as configurações do titulo, texto e da lista que ficam 
 /*=============================
   Footer
 =============================*/
-.footer{
+.main-footer{
   background: var(--primary-color);
   min-width: 100vh;
+  padding: 5rem;
+}
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-content p{
+  font-size: 1.6rem;
+  color: var(--text-second-color);
+  font-weight: 400;
+}
+.footer-links{
+  display: flex;
+  gap: var(--gap);
+}
+.github, .linkedin{
+  color: var(--text-second-color);
+  font-size: 10rem;
+}
+.footer-law p{
+  color: var(--text-second-color);
+  font-size: 1.2rem;
+}
+.footer-law p a{
+  text-decoration: none;
+  color: var(--third-color);
+}
+
+.footer-law{
+  position: relative;
+  text-align: center;
+  margin-top: 2rem;
+}
+.footer-law::before{
+  content: '';
+  position: absolute;
+  bottom: 3rem;
+  width: 100rem;
+  height: 0.1rem;
+  background: var(--color-background);
+  border-radius: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
