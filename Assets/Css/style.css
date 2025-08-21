@@ -26,9 +26,9 @@ html {
 body {
   /*<a href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/">Free SVG Backgrounds and Patterns by SVGBackgrounds.com</a>*/
 background-color: #FFFFFF;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='402' height='402' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%230B2738' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23405A68'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='402' height='402' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23405A68' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23FFFFFF'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
   
-  
+/*font da pagina*/ 
   font-family: "Geologica", sans-serif;
   font-style: normal;
   font-variation-settings:
@@ -118,7 +118,6 @@ nav a:hover::after {
 }
 .main-content {
   max-width: 120rem;
-  margin: 0 2rem;
 }
 .background-top{
   background-image: url(../imagens/backtop.png);
@@ -143,8 +142,7 @@ nav a:hover::after {
 .section-project{
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center; 
+  flex-direction: column; 
   align-items: center;
   padding: 0 4.8rem;
 }
@@ -168,6 +166,13 @@ nav a:hover::after {
 .space-area{
   margin: 7rem;
 }
+.paragraph-title{
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
 /*============================
    Seção introdutoria
 =============================*/
@@ -188,12 +193,13 @@ nav a:hover::after {
 }
 .intro-text p{
   font-size: 1.8rem;
+  font-weight: 600;
   text-align: center;
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
 }
-.intro-text button{
+.intro-button button{
   width: 25rem;
   height: 5rem;
   margin-block-start: 5em;
@@ -203,8 +209,8 @@ nav a:hover::after {
   border-radius: 0.5rem;
   border: none;
   box-shadow: 0  0.5rem 0.5rem var(--second-color);
-}
-.intro-text button a {
+
+/*config do texto*/
   font-size: 2rem;
   padding: 1rem;
   text-transform: uppercase;
@@ -212,144 +218,97 @@ nav a:hover::after {
   font-weight: 700;
   color: var(--text-second-color);
 }
+.intro-button button:hover{
+  color: var(--third-color);
+  cursor: pointer;
+}
+
 
 /* ===============================
    Seção Sobre Mim
 ================================== */
-.content-about{
-  
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap:  var(--gap);
-  height: 100vh;
+/*titulo da seçao sobre mim*/
+.section-about h2{
+  position: relative;
+  text-align: center;
+  font-size: 3.6rem;
+  color: var(--text-second-color);
+  padding: 4rem;
 }
-.sobre-text, .sobre-img {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+/*linha do titulo*/
+.section-about h2::after{
+  content: '';
+  position: absolute;
+  top: 10rem;
+  height: 0.7rem;
+  width: 30rem;
+  background: var(--text-second-color);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+}
+.section-about p{
   color: var(--text-second-color);
 }
-.sobre-text h2{
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  text-transform: uppercase;
+.content-about{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas */
+  gap: 6rem; /* aumenta o espaço entre texto e skills */
+  align-items: start;
+  max-width: 1200px; /* largura máxima da seção */
+  margin: 0 auto; /* centraliza no meio da página */
+  padding: 0 2rem; /* respiro lateral */
+  margin-top: 10rem;
+}
+
+
+.text-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* mantém alinhado à esquerda da coluna */
+  justify-content: center; /* centraliza verticalmente dentro da coluna */
+  gap: var(--gap);
+}
+
+/* Ajuste no texto */
+.sobre-text {
+  line-height: 1.6;
+  text-align: left; /* joga texto pro canto esquerdo */
+}
+.sobre-text h3{
+  font-size: 2.6rem;
+  color: var(--text-second-color);
 }
 .sobre-text p{
   font-size: 2rem;
+  color: var(--text-second-color);
   font-weight: 300;
-  text-align: justify;
-  line-height: 1.5;
+}
+
+.text-skill h3 {
+  font-size: 2.6rem;
+  color: var(--text-second-color);
+}
+
+/* Layout das caixinhas de habilidade */
+.block-skill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.content-block {
+  background: #f3f3f3;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
 }
 .span-config{
-  display:inline-block;
-  padding: 0;
-}
-.sobre-img img{
-  width: 100%;
-  height: auto;
+  line-height: 1.5rem;
 }
 /* ===============================
-   Seção Projetos
-================================== */
-.content-project{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: var(--gap);
-}
-
-.block{
-  display: flex;
-  flex-direction: column; /* Vai organiza a imagem e o texto em coluna */
-  background-color: var(--second-color);
-  border-radius: 1rem;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
-  overflow: hidden; /* Vai fazer que a imagem fique dentro da borda arredondada */
-  border: none; /* Remove a borda */
-  padding: 1rem;
-  
-}
-
-/* Estilo da imagem dentro do bloco */
-.project-img {
-  width: 100%;
-  height: auto;
-  overflow: hidden; /* Esconde qualquer parte da imagem que possa transbordar */
-  border-radius: 1rem 1rem 0 0;
-}
-
-.project-img img {
-  width: 100%; /* A imagem sempre tera 100% da largura do meu contêiner */
-  height: auto; /* A altura vai se ajusta para manter a proporção */
-  display: block; /* tira o espaço extra abaixo da imagem */
-  transition: transform 0.3s ease; /* Adiciona uma transição suave para um possível efeito de hover (nao sei se vou usar????? $$$Nao esquece em$$$$)*/
-}
-.project-img img:hover{
-
-  color: azure;/*nao ta funcionando so coloquei pra sair o erro*/
-  /*depois tentar fazer a animaçao da imagem aumentar*/
-}
-.icons-project a img{
-  width: 4rem;
-  height: 4rem;
-  margin: 0.5rem 1.5rem;
-}
-
-.h2project{
-  padding: 1rem;
-}
-/* Configuração do titulo "PROJETOS"*/
-.h2project h2{
-  font-size: 4.8rem;
-  text-transform: uppercase;
-  color: var(--primary-color);
-  text-align: center;
-}
-/*===============================================================================
-O context-text faz as configurações do titulo, texto e da lista que ficam na grid seção projeto
-================================================================================*/
-.content-text{
-  padding: 2rem;
-  border-radius: 0 0 1rem 1rem;
-  color: white;
-}
-
-.content-text h3{
-  font-size: 2.4rem;
-
-}
-.content-text p{
-  font-size: 1.6rem;
-  text-align: justify;
-}
-/*por causa que resetei o padding e o margin no inicio a ul nao consegue o espaçamento por isso da configuração abaixo pra alinhar ela da maneira que quero*/
-.content-text ul{
-  padding-left: 1.5rem; 
-  margin-top: 1rem;
-}
-.content-text li{
-  font-size: 1.5rem;
-}
-/*===============================================================================
-Acima context-text faz as configurações do titulo, texto e da lista que ficam na grid seção projeto
-=================================================================================*/
-
-/* ===============================
-   Seção Habilidades
+   Parte de Habilidades
 ================================== */
 /*Por favor nao esqueça de colocar "." quando for referenciar a classe, gabriel*/
-.content-skill{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    height: 100vh;
-
-}
-.text-skill{
-  display: flex;
-  flex-flow: column wrap;
-  margin: 10rem;
-  
-}
 
 .block-skill{
   display: flex;
@@ -367,22 +326,173 @@ Acima context-text faz as configurações do titulo, texto e da lista que ficam 
   background-color: rgba(255, 255, 255, 0.888);
 }
 .text-skill h4{
+  font-size: 2.6rem;
   text-align: center;
 }
 .content-block h5{
   font-size: 1.5rem;
   text-transform: uppercase;
 }
-.img-left{
-  display: flex;
-  flex-flow: column wrap;
-  justify-content:center;
+
+/* ===============================
+   Seção Projetos
+================================== */
+
+.content-project{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: var(--gap);
+  margin-top: 10rem;
+  overflow: hidden;
+}
+/*Começo do codigo do background-image dos projetos*/
+.doranime-project{
+  background-image:url(../imagens/doranimePortfolio.png) ;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  
 }
 
-.img-left img{
-  width: 70%;
+/*Acima esta o Codigo do background-image dos projetos*/
+
+
+.project-card{
+  aspect-ratio: 16/9; /* mantém proporção estilo card de portfolio */
   height: auto;
+  border: none;
+  border-radius: 2rem;
+  
 }
+
+
+.segundo-projeto{
+   position: relative;
+}
+.project-card p, .project-card button{
+  opacity: 0;
+}
+
+.project-card:hover p{
+  opacity: 100%;
+  
+}
+.project-card:hover button{
+  opacity: 100%;
+  
+}
+/* Garante que o conteúdo inicie invisível */
+.project-card .content-text {
+  opacity: 0;
+  transform: translateY(20px); /* começa um pouco abaixo */
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  transition-delay: 0.3s; /* espera o background começar a subir */
+}
+.icons-links {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  /* sem delay na saída */
+}
+
+.project-card:hover .icons-links {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s; /* só atrasa quando aparece */
+}
+
+/* Quando o hover estiver ativo, o texto aparece */
+.project-card:hover .content-text{
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Camada de cor para o efeito */
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0; /* equivale a top:0; right:0; bottom:0; left:0 */
+  background: var(--primary-color);
+  border-radius: 2rem;
+  clip-path: inset(100% 0 0 0); /* começa escondido embaixo */
+  transition: clip-path 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.project-card:hover::before {
+  clip-path: inset(0 0 0 0); /* revela todo o fundo */
+}
+
+
+/* Garante que texto e botões fiquem acima da cor */
+.project-card * {
+  position: relative;
+  z-index: 1;
+}
+
+.icons-project a img{
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5rem 1.5rem;
+}
+
+.h2project{
+  padding: 1rem;
+}
+/* Configuração do titulo "PROJETOS"*/
+.h2project h2{
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 4rem;
+}
+.h2project h2::after{
+  content: '';
+  position: absolute;
+  top: 10rem;
+  height: 0.7rem;
+  width: 40rem;
+  background: var(--primary-color);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+}
+.h2project p{
+  color: var(--primary-color);
+  
+}
+/*===============================================================================
+O context-text faz as configurações do titulo, texto e da lista que ficam na grid seção projeto
+================================================================================*/
+.content-text {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 4rem;
+  border-radius: 0 0 1rem 1rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.icons-links{
+  padding: 0 4rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--gap);
+
+}
+
+.content-text p{
+  font-size: 1.6rem;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 /*=============================
   Seção de Formulario
 =============================*/
@@ -425,13 +535,7 @@ Acima context-text faz as configurações do titulo, texto e da lista que ficam 
   border-radius: 0.5rem;
 }
 .title-p p{
-  font-size: 2rem;
-  font-weight: 400;
-  margin-top: 0.5rem;
-  text-align: center;
-  padding: 0 40rem;
   color: var(--primary-color);
-  
 }
 
 .form-group {
@@ -539,4 +643,11 @@ Acima context-text faz as configurações do titulo, texto e da lista que ficam 
   border-radius: 0.5rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* Quando a tela for grande, força colunas iguais */
+@media (min-width: 1024px) {
+  .content-project {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
