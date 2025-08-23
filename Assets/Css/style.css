@@ -20,15 +20,19 @@
 }
 
 html {
-  font-size: 62.5%; /* 1rem = 10 px*/
+  font-size: 62.5%;
+  /* 1rem = 10 px*/
+  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
+
   /*<a href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/">Free SVG Backgrounds and Patterns by SVGBackgrounds.com</a>*/
-background-color: #FFFFFF;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='402' height='402' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23405A68' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23FFFFFF'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
-  
-/*font da pagina*/ 
+  background-color: #FFFFFF;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='402' height='402' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23405A68' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23FFFFFF'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+
+  /*font da pagina*/
   font-family: "Geologica", sans-serif;
   font-style: normal;
   font-variation-settings:
@@ -36,54 +40,84 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     "CRSV" 0,
     "SHRP" 0;
 }
+
 /* ===============================
    Tamanhos de fontes
 ================================== */
 /*antes de enviar o trabalho ver se estou usando mesmo isso*/
-h1 { font-size: 6rem; text-transform: uppercase; }
-h2 { font-size: 5.5rem; }
-h3 { font-size: 5rem; }
-h4 { font-size: 4.5rem; }
-h5 { font-size: 4rem; }
-h6 { font-size: 3.5rem; }
+h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 5.5rem;
+}
+
+h3 {
+  font-size: 5rem;
+}
+
+h4 {
+  font-size: 4.5rem;
+}
+
+h5 {
+  font-size: 4rem;
+}
+
+h6 {
+  font-size: 3.5rem;
+}
 
 /* ===============================
    Menu e Cabeçalho
 ================================== */
 .menu {
-  position: fixed; /* mantem o menu(cabeçalho) fixado na pagina*/
+  position: fixed;
+  /* mantem o menu(cabeçalho) fixado na pagina*/
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   border-bottom: 1px solid var(--third-color);
   background-color: var(--color-background);
-  box-sizing: border-box; /* faz que os elemementos nao ultrapasse a caixa do menu*/
+  box-sizing: border-box;
+  /* faz que os elemementos nao ultrapasse a caixa do menu*/
   z-index: 1;
 
   display: flex;
   align-items: center;
-  padding: 10px 30px; 
-  overflow-x: hidden; /* Impede que o conteúdo transborde horizontalmente e oculta caso ultrapasse */
+  padding: 10px 30px;
+  overflow-x: hidden;
+  /* Impede que o conteúdo transborde horizontalmente e oculta caso ultrapasse */
 }
+
 /*Parte do codigo das configuraçoes da logo*/
-.logo{
-    margin-left: 30px; /* aqui vai manter a minha logo afastada do lado esquerdo*/
+.logo {
+  margin-left: 30px;
+  /* aqui vai manter a minha logo afastada do lado esquerdo*/
 }
+
 /*Modificaçoes do tamanho da minha logo*/
 .img-circular {
-  width:30%;
-  height: 100%;
+  width: 120px;
+  height: auto;
 }
+
 /*Fim parte do codigo das configuraçoes da logo*/
-nav{
-    margin-left: auto;
+nav {
+  margin-left: auto;
 }
+
 nav ul {
   display: flex;
-  list-style: none;
+  flex-direction: row;
   gap: var(--gap);
+  list-style: none;
+  align-items: center;
 }
+
 nav a {
   display: inline-block;
   text-decoration: none;
@@ -93,9 +127,10 @@ nav a {
   font-size: 1.8rem;
   text-transform: uppercase;
 }
+
 /*Animação e criação da linha dos link no menu*/
-nav a::after{
-  content:'';
+nav a::after {
+  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -104,94 +139,119 @@ nav a::after{
   background: var(--second-color);
   transition: all 300ms ease-in-out;
 }
+
 nav a:hover::after {
   width: 100%;
   left: 0;
 }
+
 /*termina a linha da animação do link*/
 
 /* ===============================
    Conteúdo principal
 ================================== */
-.section-project, .section-about, .section-skill, .section-contact{
-  scroll-margin-top: 5rem; /* Adiciona um espaço  acima da seção quando clicar na ancora que leva a seçao da pagina*/
+.section-project,
+.section-about,
+.section-skill,
+.section-contact {
+  scroll-margin-top: 5rem;
+  /* Adiciona um espaço  acima da seção quando clicar na ancora que leva a seçao da pagina*/
 }
+
 .main-content {
   max-width: 120rem;
 }
-.background-top{
+
+.background-top {
   background-image: url(../imagens/backtop.png);
-  height: 100px; /* Defina uma altura fixa para a curva */
-  background-size: 100% 100%; /* Faz a imagem preencher toda a área da div */
-  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  height: 100px;
+  /* Defina uma altura fixa para a curva */
+  background-size: 100% 100%;
+  /* Faz a imagem preencher toda a área da div */
+  background-repeat: no-repeat;
+  /* Impede que a imagem se repita */
 }
-.background-bottom{
+
+.background-bottom {
   background-image: url(../imagens/backBottom.png);
-  height: 100px; /* Defina uma altura fixa para a curva */
-  background-size: 100% 100%; /* Faz a imagem preencher toda a área da div */
-  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  height: 100px;
+  /* Defina uma altura fixa para a curva */
+  background-size: 100% 100%;
+  /* Faz a imagem preencher toda a área da div */
+  background-repeat: no-repeat;
+  /* Impede que a imagem se repita */
 }
-.section-about{
+
+.section-about {
   min-height: 100vh;
-  background:var(--primary-color);
+  background: var(--primary-color);
   background-size: cover;
   background-position: center;
   height: 80rem;
   max-height: 100%;
 }
-.section-project{
+
+.section-project {
   min-height: 100vh;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   padding: 0 4.8rem;
 }
-.section-skill{
+
+.section-skill {
   background: #0B2738;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   position: relative;
 }
-.section-contact{
+
+.section-contact {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.space-area{
+
+.space-area {
   margin: 7rem;
 }
-.paragraph-title{
+
+.paragraph-title {
   font-size: 1.8rem;
   font-weight: 600;
   margin-top: 0.5rem;
   text-align: center;
   margin-top: 0.5rem;
 }
+
 /*============================
    Seção introdutoria
 =============================*/
-.introduction-section{
+.introduction-section {
   display: flex;
   flex-flow: column wrap;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
 }
-.intro-text{
+
+.intro-text {
   text-align: center;
   color: var(--primary-color);
-  
+
 }
-.intro-text h1{
+
+.intro-text h1 {
   font-size: 5rem;
 }
-.intro-text p{
+
+.intro-text p {
   font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
@@ -199,7 +259,8 @@ nav a:hover::after {
   margin-block-start: 1em;
   margin-block-end: 1em;
 }
-.intro-button button{
+
+.intro-button button {
   width: 25rem;
   height: 5rem;
   margin-block-start: 5em;
@@ -208,9 +269,9 @@ nav a:hover::after {
   background-color: var(--primary-color);
   border-radius: 0.5rem;
   border: none;
-  box-shadow: 0  0.5rem 0.5rem var(--second-color);
+  box-shadow: 0 0.5rem 0.5rem var(--second-color);
 
-/*config do texto*/
+  /*config do texto*/
   font-size: 2rem;
   padding: 1rem;
   text-transform: uppercase;
@@ -218,7 +279,8 @@ nav a:hover::after {
   font-weight: 700;
   color: var(--text-second-color);
 }
-.intro-button button:hover{
+
+.intro-button button:hover {
   color: var(--third-color);
   cursor: pointer;
 }
@@ -228,15 +290,16 @@ nav a:hover::after {
    Seção Sobre Mim
 ================================== */
 /*titulo da seçao sobre mim*/
-.section-about h2{
+.section-about h2 {
   position: relative;
   text-align: center;
   font-size: 3.6rem;
   color: var(--text-second-color);
   padding: 4rem;
 }
+
 /*linha do titulo*/
-.section-about h2::after{
+.section-about h2::after {
   content: '';
   position: absolute;
   top: 10rem;
@@ -247,39 +310,49 @@ nav a:hover::after {
   transform: translateX(-50%);
   border-radius: 0.5rem;
 }
-.section-about p{
+
+.section-about p {
   color: var(--text-second-color);
 }
-.content-about{
+
+.content-about {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* duas colunas */
-  gap: 6rem; /* aumenta o espaço entre texto e skills */
+  grid-template-columns: 1fr 1fr;/* duas colunas */
+  gap: 6rem;/* aumenta o espaço entre texto e skills */
   align-items: start;
-  max-width: 1200px; /* largura máxima da seção */
-  margin: 0 auto; /* centraliza no meio da página */
-  padding: 0 2rem; /* respiro lateral */
+  max-width: 1200px;/* largura máxima da seção */
+  margin: 0 auto;/* centraliza no meio da página */
+  padding: 0 2rem;/* respiro lateral */
   margin-top: 10rem;
+}
+.sobre-text, 
+.text-skill {
+  max-width: 100%;
+  word-wrap: break-word; /* quebra palavras grandes */
 }
 
 
 .text-skill {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* mantém alinhado à esquerda da coluna */
-  justify-content: center; /* centraliza verticalmente dentro da coluna */
+  align-items: flex-start;/* mantém alinhado à esquerda da coluna */
+  justify-content: center;/* centraliza verticalmente dentro da coluna */
   gap: var(--gap);
 }
 
 /* Ajuste no texto */
 .sobre-text {
   line-height: 1.6;
-  text-align: left; /* joga texto pro canto esquerdo */
+  text-align: left;
+  /* joga texto pro canto esquerdo */
 }
-.sobre-text h3{
+
+.sobre-text h3 {
   font-size: 2.6rem;
   color: var(--text-second-color);
 }
-.sobre-text p{
+
+.sobre-text p {
   font-size: 2rem;
   color: var(--text-second-color);
   font-weight: 300;
@@ -296,40 +369,47 @@ nav a:hover::after {
   flex-wrap: wrap;
   gap: 1rem;
 }
+
 .content-block {
   background: #f3f3f3;
   padding: 0.8rem 1.6rem;
   border-radius: 0.5rem;
   font-size: 1.6rem;
 }
-.span-config{
+
+.span-config {
   line-height: 1.5rem;
 }
+
 /* ===============================
    Parte de Habilidades
 ================================== */
 /*Por favor nao esqueça de colocar "." quando for referenciar a classe, gabriel*/
 
-.block-skill{
+.block-skill {
   display: flex;
 }
-.content-block{
+
+.content-block {
   padding: 1rem;
-  border:0.2rem solid black;
+  border: 0.2rem solid black;
   border-radius: 0.5rem;
   background-color: var(--color-background);
   margin: 0.1rem 0.3rem;
   border: none;
 
 }
-.content-block:hover{
+
+.content-block:hover {
   background-color: rgba(255, 255, 255, 0.888);
 }
-.text-skill h4{
+
+.text-skill h4 {
   font-size: 2.6rem;
   text-align: center;
 }
-.content-block h5{
+
+.content-block h5 {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
@@ -338,56 +418,67 @@ nav a:hover::after {
    Seção Projetos
 ================================== */
 
-.content-project{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: var(--gap);
-  margin-top: 10rem;
-  overflow: hidden;
+.content-project {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem;
+  justify-items:center;
+  margin-top: 5rem;
 }
+
 /*Começo do codigo do background-image dos projetos*/
-.doranime-project{
-  background-image:url(../imagens/doranimePortfolio.png) ;
+.doranime-project, .segundo-projeto, .terceiro-projeto {
+  background-image: url(../imagens/doranimePortfolio.png);
   background-size: cover;
   background-position: center;
   position: relative;
-  
+
 }
 
 /*Acima esta o Codigo do background-image dos projetos*/
 
 
-.project-card{
-  aspect-ratio: 16/9; /* mantém proporção estilo card de portfolio */
-  height: auto;
-  border: none;
-  border-radius: 2rem;
-  
+.project-card {
+  width: 100%;
+  max-width: 500px; /* limite de largura */
+  height: 300px;    /* altura fixa */
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 
-.segundo-projeto{
-   position: relative;
+.segundo-projeto {
+  position: relative;
 }
-.project-card p, .project-card button{
+.terceiro-projeto {
+  position: relative;
+}
+
+.project-card p,
+.project-card button {
   opacity: 0;
 }
 
-.project-card:hover p{
+.project-card:hover p {
   opacity: 100%;
-  
+
 }
-.project-card:hover button{
+
+.project-card:hover button {
   opacity: 100%;
-  
+
 }
+
 /* Garante que o conteúdo inicie invisível */
 .project-card .content-text {
   opacity: 0;
-  transform: translateY(20px); /* começa um pouco abaixo */
+  transform: translateY(20px);
+  /* começa um pouco abaixo */
   transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-  transition-delay: 0.3s; /* espera o background começar a subir */
+  transition-delay: 0.3s;
+  /* espera o background começar a subir */
 }
+
 .icons-links {
   opacity: 0;
   transform: translateY(20px);
@@ -398,28 +489,33 @@ nav a:hover::after {
 .project-card:hover .icons-links {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.3s; /* só atrasa quando aparece */
+  transition-delay: 0.3s;
+  /* só atrasa quando aparece */
 }
 
 /* Quando o hover estiver ativo, o texto aparece */
-.project-card:hover .content-text{
+.project-card:hover .content-text {
   opacity: 1;
   transform: translateY(0);
 }
+
 /* Camada de cor para o efeito */
 .project-card::before {
   content: '';
   position: absolute;
-  inset: 0; /* equivale a top:0; right:0; bottom:0; left:0 */
+  inset: 0;
+  /* equivale a top:0; right:0; bottom:0; left:0 */
   background: var(--primary-color);
   border-radius: 2rem;
-  clip-path: inset(100% 0 0 0); /* começa escondido embaixo */
+  clip-path: inset(100% 0 0 0);
+  /* começa escondido embaixo */
   transition: clip-path 0.5s ease-in-out;
   z-index: 0;
 }
 
 .project-card:hover::before {
-  clip-path: inset(0 0 0 0); /* revela todo o fundo */
+  clip-path: inset(0 0 0 0);
+  /* revela todo o fundo */
 }
 
 
@@ -429,17 +525,18 @@ nav a:hover::after {
   z-index: 1;
 }
 
-.icons-project a img{
+.icons-project a img {
   width: 4rem;
   height: 4rem;
   margin: 0.5rem 1.5rem;
 }
 
-.h2project{
+.h2project {
   padding: 1rem;
 }
+
 /* Configuração do titulo "PROJETOS"*/
-.h2project h2{
+.h2project h2 {
   position: relative;
   font-size: 4rem;
   text-transform: uppercase;
@@ -447,7 +544,8 @@ nav a:hover::after {
   text-align: center;
   padding: 4rem;
 }
-.h2project h2::after{
+
+.h2project h2::after {
   content: '';
   position: absolute;
   top: 10rem;
@@ -458,10 +556,12 @@ nav a:hover::after {
   transform: translateX(-50%);
   border-radius: 0.5rem;
 }
-.h2project p{
+
+.h2project p {
   color: var(--primary-color);
-  
+
 }
+
 /*===============================================================================
 O context-text faz as configurações do titulo, texto e da lista que ficam na grid seção projeto
 ================================================================================*/
@@ -474,7 +574,8 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
   justify-content: center;
   align-items: center;
 }
-.icons-links{
+
+.icons-links {
   padding: 0 4rem;
   margin-top: 1rem;
   display: flex;
@@ -484,7 +585,7 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
 
 }
 
-.content-text p{
+.content-text p {
   font-size: 1.6rem;
   text-align: justify;
   justify-content: center;
@@ -500,14 +601,17 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Centraliza os filhos na horizontal */
-  margin: 0 auto;     /* Centraliza o contêiner na página */
-  gap: var(--gap);    /* Adiciona espaçamento entre os filhos */
+  align-items: center;
+  /* Centraliza os filhos na horizontal */
+  margin: 0 auto;
+  /* Centraliza o contêiner na página */
+  gap: var(--gap);
+  /* Adiciona espaçamento entre os filhos */
   max-width: 100%;
-  
+
 }
 
-.form-grid{
+.form-grid {
   background-color: whitesmoke;
   border: none;
   border-radius: 1rem;
@@ -515,15 +619,17 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
   margin: 2rem 0;
   min-width: 70%;
 }
+
 .title-p h2 {
   position: relative;
   font-weight: 600;
-  font-size: 5rem; 
+  font-size: 5rem;
   padding: 4rem;
   text-align: center;
   text-transform: uppercase;
 }
-.title-p h2::after{
+
+.title-p h2::after {
   content: '';
   position: absolute;
   top: 10rem;
@@ -534,7 +640,8 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
   transform: translateX(-50%);
   border-radius: 0.5rem;
 }
-.title-p p{
+
+.title-p p {
   color: var(--primary-color);
 }
 
@@ -547,7 +654,8 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
   display: block;
   margin-bottom: 1rem;
 }
-.form-group label span{
+
+.form-group label span {
   font-size: 1.8rem;
   color: var(--primary-color);
 }
@@ -561,21 +669,24 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
   width: 100%;
   font-size: 1.8rem;
   outline: none;
-  resize:  none;
+  resize: none;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   box-shadow: 0 0 10px 2px var(--primary-color);
 }
+
 .button-class {
   display: flex;
   justify-content: right;
 }
-.button-class span{
+
+.button-class span {
   color: var(--text-second-color);
   font-weight: 600;
 }
+
 .form-group button {
   border: none;
   border-radius: 0.5rem;
@@ -590,50 +701,61 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
 .form-group button:hover {
   background: #0b2738dd;
 }
-.full-width{
-   width: 100%;
+
+.full-width {
+  width: 100%;
   flex: 1 1 100%;
 }
+
 /*=============================
   Footer
 =============================*/
-.main-footer{
+.main-footer {
   background: var(--primary-color);
-  min-width: 100vh;
+  min-width: 100%;
   padding: 5rem;
 }
-.footer-content{
+
+.footer-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.footer-content p{
+
+.footer-content p {
   font-size: 1.6rem;
   color: var(--text-second-color);
   font-weight: 400;
 }
-.footer-links{
+
+.footer-links {
   display: flex;
   gap: var(--gap);
 }
-.github, .linkedin{
+
+.github,
+.linkedin {
   color: var(--text-second-color);
   font-size: 10rem;
 }
-.footer-law p{
+
+.footer-law p {
   color: var(--text-second-color);
   font-size: 1.2rem;
 }
-.footer-law p a{
+
+.footer-law p a {
   text-decoration: none;
   color: var(--third-color);
 }
 
-.footer-law{
+.footer-law {
   position: relative;
   text-align: center;
   margin-top: 2rem;
 }
-.footer-law::before{
+
+.footer-law::before {
   content: '';
   position: absolute;
   bottom: 3rem;
@@ -645,9 +767,232 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
   transform: translateX(-50%);
 }
 
-/* Quando a tela for grande, força colunas iguais */
-@media (min-width: 1024px) {
+
+
+/*========================================
+Configurações de Responsividade
+========================================*/
+
+/* ======================
+   Telas grandes (a partir de 1025px)
+   - Mantém 3 colunas nos projetos
+====================== */
+@media (min-width: 1025px) {
   .content-project {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* ======================
+   Tablets e notebooks até 1024px
+   - About em 1 coluna
+   - Skills com espaçamento
+   - Projetos em 2 colunas
+   - Ajusta tamanho da imagem circular
+====================== */
+@media (max-width: 1024px) {
+  .section-about {
+    height: auto;
+  }
+
+  .content-about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .text-skill {
+    margin-bottom: 3rem;
+  }
+
+  .content-project {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* 400px para caber 2 */
+  }
+
+  .project-card {
+    width: 100%; /* ocupa toda a célula */
+    height: 280px;
+  }
+
+  .img-circular {
+    max-width: 100px;
+  }
+}
+
+/* ======================
+   Telas até 768px (celulares grandes)
+   - Ajusta menu hambúrguer
+   - Limita largura do main
+   - Ajusta section about
+   - Ajusta formulários
+   - Ajusta footer
+   - Projetos fixos em 300px de altura
+====================== */
+@media (max-width: 768px) {
+  /* Menu hambúrguer */
+  nav ul {
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--color-background);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    padding: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  nav ul.show {
+    max-height: 500px; /* anima quando clica no hambúrguer */
+  }
+
+  .menu .hamburger {
+    display: block;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+
+  .menu {
+    justify-content: space-between;
+  }
+
+  /* Conteúdo principal */
+  .main-content {
+    max-width: 100%;
+  }
+
+  /* Section about */
+  .section-about {
+    height: auto;
+  }
+
+  .content-about {
+    gap: 3rem;
+    margin-top: 5rem;
+    width: 100%;
+  }
+
+  .sobre-text p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .text-skill {
+    margin-bottom: 3rem;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* Formulário */
+  .form-grid {
+    min-width: 100%;
+    padding: 2rem;
+  }
+
+  /* Footer */
+  .main-footer {
+    background: var(--primary-color);
+    min-width: 100%;
+    padding: 3rem 1rem;
+  }
+
+  .footer-content {
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-content p {
+    font-size: 1.4rem;
+    color: var(--text-second-color);
+    font-weight: 400;
+  }
+
+  .footer-law {
+    position: relative;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .footer-law::before {
+    content: '';
+    position: absolute;
+    bottom: 4rem;
+    width: 100%;
+    height: 0.1rem;
+    background: var(--color-background);
+    border-radius: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Projetos */
+   .content-project {
+    grid-template-columns: 1fr !important; /* apenas 1 card por linha */
+  }
+
+  .project-card {
+    height: 350px;
+    max-width: 100%;
+  }
+
+  /* Imagem de perfil menor */
+  .img-circular {
+    max-width: 80px;
+  }
+}
+
+/* ======================
+   Celulares médios até 600px
+   - Projetos em 1 coluna
+   - Cards altura fixa
+====================== */
+@media (max-width: 600px) {
+  .content-project {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    height: 300px;
+  }
+}
+
+/* ======================
+   Celulares pequenos até 480px
+   - Ajusta projetos
+   - Ajusta tipografia da introdução
+   - Ajusta espaçamento geral
+====================== */
+@media (max-width: 480px) {
+  .project-card {
+    width: 100%;
+    max-width: 320px; /* ajusta pro celular menor */
+    height: 240px;
+  }
+
+  .intro-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .intro-text p {
+    font-size: 1.4rem;
+  }
+
+  .intro-button button {
+    width: 100%;
+  }
+
+  .sobre-text p {
+    font-size: 1.4rem;
+  }
+}
+
+/* ======================
+   Regra global
+   - Esconde o ícone do hamburger em telas grandes
+====================== */
+.menu .hamburger {
+  display: none; /* padrão: escondido */
 }
