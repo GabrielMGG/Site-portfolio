@@ -158,14 +158,14 @@ nav a:hover::after {
 }
 
 .background-top {
-  background-image: url(../imagens/backtop.png);
+  background-image: url(/assets/imagens/backtop.png);
   height: 100px;  /* Defina uma altura fixa para a curva */
   background-size: 100% 100%;  /* Faz a imagem preencher toda a área da div */
   background-repeat: no-repeat;  /* Impede que a imagem se repita */
 }
 
 .background-bottom {
-  background-image: url(../imagens/backBottom.png);
+  background-image: url(/assets/imagens/backBottom.png);
   height: 100px;  /* Defina uma altura fixa para a curva */
   background-size: 100% 100%;  /* Faz a imagem preencher toda a área da div */
   background-repeat: no-repeat;  /* Impede que a imagem se repita */
@@ -417,7 +417,7 @@ nav a:hover::after {
 
 /*Começo do codigo do background-image dos projetos*/
 .doranime-project, .segundo-projeto, .terceiro-projeto {
-  background-image: url(../imagens/doranimePortfolio.png);
+  background-image: url(/assets/imagens/doranimePortfolio.png);
   background-size: cover;
   background-position: center;
   position: relative;
