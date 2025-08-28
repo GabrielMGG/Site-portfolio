@@ -74,29 +74,25 @@ h6 {
    Menu e Cabeçalho
 ================================== */
 .menu {
-  position: fixed;
-  /* mantem o menu(cabeçalho) fixado na pagina*/
+  position: fixed; /* mantem o menu(cabeçalho) fixado na pagina*/
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   border-bottom: 1px solid var(--third-color);
   background-color: var(--color-background);
-  box-sizing: border-box;
-  /* faz que os elemementos nao ultrapasse a caixa do menu*/
+  box-sizing: border-box;/* faz que os elemementos nao ultrapasse a caixa do menu*/
   z-index: 1;
 
   display: flex;
   align-items: center;
   padding: 10px 30px;
-  overflow-x: hidden;
-  /* Impede que o conteúdo transborde horizontalmente e oculta caso ultrapasse */
+  overflow-x: hidden;  /* Impede que o conteúdo transborde horizontalmente e oculta caso ultrapasse */
 }
 
 /*Parte do codigo das configuraçoes da logo*/
 .logo {
-  margin-left: 30px;
-  /* aqui vai manter a minha logo afastada do lado esquerdo*/
+  margin-left: 30px;  /* aqui vai manter a minha logo afastada do lado esquerdo*/
 }
 
 /*Modificaçoes do tamanho da minha logo*/
@@ -154,8 +150,7 @@ nav a:hover::after {
 .section-about,
 .section-skill,
 .section-contact {
-  scroll-margin-top: 5rem;
-  /* Adiciona um espaço  acima da seção quando clicar na ancora que leva a seçao da pagina*/
+  scroll-margin-top: 5rem;  /* Adiciona um espaço  acima da seção quando clicar na ancora que leva a seçao da pagina*/
 }
 
 .main-content {
@@ -164,22 +159,16 @@ nav a:hover::after {
 
 .background-top {
   background-image: url(../imagens/backtop.png);
-  height: 100px;
-  /* Defina uma altura fixa para a curva */
-  background-size: 100% 100%;
-  /* Faz a imagem preencher toda a área da div */
-  background-repeat: no-repeat;
-  /* Impede que a imagem se repita */
+  height: 100px;  /* Defina uma altura fixa para a curva */
+  background-size: 100% 100%;  /* Faz a imagem preencher toda a área da div */
+  background-repeat: no-repeat;  /* Impede que a imagem se repita */
 }
 
 .background-bottom {
   background-image: url(../imagens/backBottom.png);
-  height: 100px;
-  /* Defina uma altura fixa para a curva */
-  background-size: 100% 100%;
-  /* Faz a imagem preencher toda a área da div */
-  background-repeat: no-repeat;
-  /* Impede que a imagem se repita */
+  height: 100px;  /* Defina uma altura fixa para a curva */
+  background-size: 100% 100%;  /* Faz a imagem preencher toda a área da div */
+  background-repeat: no-repeat;  /* Impede que a imagem se repita */
 }
 
 .section-about {
@@ -863,6 +852,12 @@ Configurações de Responsividade
     max-width: 100%;
   }
 
+  /*botao da introduçao*/
+  .intro-button button {
+    width: 80%;
+  }
+
+
   /* Section about */
   .section-about {
     height: auto;
@@ -981,7 +976,7 @@ Configurações de Responsividade
   }
 
   .intro-button button {
-    width: 100%;
+    width: 80%;
   }
 
   .sobre-text p {
