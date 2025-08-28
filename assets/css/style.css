@@ -165,7 +165,7 @@ nav a:hover::after {
 }
 
 .background-bottom {
-  background-image: url(/assets/imagens/backBottom.png);
+  background-image: url(/assets/imagens/backbottom.png);
   height: 100px;  /* Defina uma altura fixa para a curva */
   background-size: 100% 100%;  /* Faz a imagem preencher toda a área da div */
   background-repeat: no-repeat;  /* Impede que a imagem se repita */
