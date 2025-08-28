@@ -417,7 +417,7 @@ nav a:hover::after {
 
 /*Começo do codigo do background-image dos projetos*/
 .doranime-project, .segundo-projeto, .terceiro-projeto {
-  background-image: url(/assets/imagens/doranimePortfolio.png);
+  background-image: url(/assets/imagens/doranimeportfolio.png);
   background-size: cover;
   background-position: center;
   position: relative;
