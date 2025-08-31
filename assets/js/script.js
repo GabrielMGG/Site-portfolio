@@ -46,3 +46,21 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
       submitButton.disabled = false;
     });
 });
+
+
+// Menu hamburguer
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("nav ul");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+    hamburger.classList.toggle("active");
+});
+
+// Fechar o menu ao clicar em um link
+document.querySelectorAll("nav ul li a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+        hamburger.classList.remove("active");
+    });
+});

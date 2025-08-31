@@ -75,20 +75,26 @@ h6 {
    Menu e Cabeçalho
 ================================== */
 .menu {
-  position: fixed; /* mantem o menu(cabeçalho) fixado na pagina*/
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   border-bottom: 1px solid var(--third-color);
   background-color: var(--color-background);
-  box-sizing: border-box;/* faz que os elemementos nao ultrapasse a caixa do menu*/
-  z-index: 1;
-
+  box-sizing: border-box;
+  z-index: 9999; /* bem alto, para sempre ficar acima */
   display: flex;
   align-items: center;
   padding: 10px 30px;
-  overflow-x: hidden;  /* Impede que o conteúdo transborde horizontalmente e oculta caso ultrapasse */
+  overflow: visible; /* importante no mobile */
+}
+/* hamburger escondido no desktop */
+.menu .hamburger {
+  display: none;               /* não aparece no desktop */
+  font-size: 2.5rem;           /* tamanho do ícone ☰ */
+  cursor: pointer;             /* cursor vira "mãozinha" */
+  color: var(--primary-color); /* cor do ícone */
 }
 
 /*Parte do codigo das configuraçoes da logo*/
@@ -846,29 +852,74 @@ Configurações de Responsividade
 ====================== */
 @media (max-width: 768px) {
   /* Menu hambúrguer */
-  nav ul {
-    flex-direction: column;
-    gap: 2rem;
-    background: var(--color-background);
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 220px;
-    padding: 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-  }
+  .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--third-color);
+  background-color: var(--color-background);
+  box-sizing: border-box;
+  z-index: 1000;
 
-  nav ul.show {
-    max-height: 500px; /* anima quando clica no hambúrguer */
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+
+  /* Tira o corte do dropdown */
+  overflow: visible;  
   }
+  nav {
+  margin-left: auto; /* Mantenha a margem automática para que o hambúrguer fique à direita */
+}
+
+nav ul {
+  flex-direction: column;
+  background: var(--color-background);
+  position: fixed;
+  top: 50px; /* Reduz a distância da caixa em relação à barra do menu */
+  padding: 0.5rem 0; /* Reduz o padding interno da caixa */
+  left: 0;
+  width: 100%;
+  max-height: 0; /* Usamos max-height para controlar a transição */
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  text-align: center;
+  z-index: 999;
+}
+
+/* Garantir que o menu dropdown ocupe a tela toda */
+nav ul.show {
+    max-height: 100vh;
+    padding: 0 0;
+    overflow-y: auto; /* Permite scroll se necessário */
+}
+
+/* Estilo para o hamburguer quando ativo */
+.hamburger.active {
+    transform: rotate(90deg);
+}
+
+/* Melhorar a visualização dos itens do menu em mobile */
+nav ul li {
+     margin: 0.3rem 0;
+}
+
+nav ul li a {
+    font-size: 2rem;
+    padding: 0.5rem;
+    display: block;
+}
+
+/* Garantir que o menu fique acima de todo o conteúdo */
+nav ul {
+    z-index: 1000;
+}
 
   .menu .hamburger {
-    display: block;
-    font-size: 2.5rem;
-    cursor: pointer;
-    color: var(--primary-color);
+    display: block; /* só aparece no mobile */
+    margin-left: auto; /* joga ele pro final */
   }
 
   .menu {
@@ -994,6 +1045,21 @@ Configurações de Responsividade
    - Ajusta espaçamento geral
 ====================== */
 @media (max-width: 480px) {
+
+
+  nav ul {
+   top: 50px;
+ }
+
+ nav ul li {
+   margin: 0.6rem 0;
+ }
+
+ nav ul li a {
+   padding: 0.6rem;
+   font-size: 1.6rem;
+ }
+
   .section-contact{
     margin: 3rem 1rem;
   }
@@ -1038,6 +1104,8 @@ Configurações de Responsividade
   transform: translateX(-50%);
   border-radius: 0.5rem;
 }
+
+ 
 }
 
 @media (max-width: 400px){
