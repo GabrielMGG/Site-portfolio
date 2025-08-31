@@ -9,6 +9,7 @@
   --third-color: #97A6AF;
   --text-second-color: white;
   --color-background: white;
+  --background-gradient: linear-gradient(90deg, rgba(11, 39, 56, 1) 10%, rgba(78, 102, 116, 1) 90%);
 
   --gap: 3rem;
 }
@@ -158,23 +159,33 @@ nav a:hover::after {
 }
 
 .background-top {
-  background-image: url(../img/backgroundtop.png);
-  height: 100px;  /* Defina uma altura fixa para a curva */
-  background-size: 100% 100%;  /* Faz a imagem preencher toda a área da div */
-  background-repeat: no-repeat;  /* Impede que a imagem se repita */
+  background: var(--background-gradient);
+  height: 100px;
+  
+  /* máscara usando a imagem */
+
+  -webkit-mask: url("../img/backgroundtop.png") no-repeat center;
+  -webkit-mask-size: 100% 100%;
+  mask: url("../img/backgroundtop.png") no-repeat center;
+  mask-size: 100% 100%;
   
 }
 
 .background-bottom {
-  background-image: url(../img/backgroundbottom.png);
-  height: 100px;  /* Defina uma altura fixa para a curva */
-  background-size: 100% 100%;  /* Faz a imagem preencher toda a área da div */
-  background-repeat: no-repeat;  /* Impede que a imagem se repita */
+  background: var(--background-gradient);
+  height: 100px;
+  
+  /* máscara usando a imagem */
+
+  -webkit-mask: url("../img/backgroundbottom.png") no-repeat center;
+  -webkit-mask-size: 100% 100%;
+  mask: url("../img/backgroundbottom.png") no-repeat center;
+  mask-size: 100% 100%;
 }
 
 .section-about {
   min-height: 100vh;
-  background: var(--primary-color);
+  background: var(--background-gradient);
   background-size: cover;
   background-position: center;
   height: 80rem;
@@ -382,7 +393,6 @@ nav a:hover::after {
 
 .content-block {
   padding: 1rem;
-  border: 0.2rem solid black;
   border-radius: 0.5rem;
   background-color: var(--color-background);
   margin: 0.1rem 0.3rem;
@@ -413,12 +423,26 @@ nav a:hover::after {
   grid-template-columns: repeat(2, 1fr) !important;
   gap: 2rem;
   justify-items:center;
-  margin-top: 5rem;
+  margin: 5rem 0;
 }
 
 /*Começo do codigo do background-image dos projetos*/
-.doranime-project, .segundo-projeto, .terceiro-projeto {
-  background-image: url(../img/doranime.png);
+.doranime{
+  background-image: url(../img/projects/doranime.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+}
+.liner-barbearia{
+  background-image: url(../img/projects/linebarbearia.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+}
+.store-tech{
+  background-image: url(../img/projects/storetech.png);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -434,15 +458,15 @@ nav a:hover::after {
   height: 300px;    /* altura fixa */
   border-radius: 15px;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 
-.segundo-projeto {
-  position: relative;
-}
-.terceiro-projeto {
-  position: relative;
-}
+
 
 .project-card p,
 .project-card button {
@@ -469,11 +493,31 @@ nav a:hover::after {
   /* espera o background começar a subir */
 }
 
+.icons-links a button{
+  font-size: 2rem;
+  color: var(--text-second-color);
+  text-transform: uppercase;
+  font-weight: 600;
+
+  border: 2px solid white;
+  border-radius: 5px;
+  background: none;
+  padding: 1rem 5rem;
+  
+}
+.icons-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+  margin-bottom: 1rem;
+
+}
+
 .icons-links {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-  /* sem delay na saída */
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;  /* sem delay na saída */
+  align-items: center;
 }
 
 .project-card:hover .icons-links {
@@ -493,19 +537,16 @@ nav a:hover::after {
 .project-card::before {
   content: '';
   position: absolute;
-  inset: 0;
-  /* equivale a top:0; right:0; bottom:0; left:0 */
-  background: var(--primary-color);
-  border-radius: 2rem;
-  clip-path: inset(100% 0 0 0);
-  /* começa escondido embaixo */
-  transition: clip-path 0.5s ease-in-out;
+  inset: 0;  /* equivale a top:0; right:0; bottom:0; left:0 */
+  background: linear-gradient(90deg,rgba(11, 39, 56, 1) 10%, rgba(78, 102, 116, 1) 90%);
+  border-radius: 15px;
+  clip-path: inset(100% 0 0 0);  /* começa escondido embaixo */
+  transition: clip-path 0.6s ease-in-out;
   z-index: 0;
 }
 
 .project-card:hover::before {
-  clip-path: inset(0 0 0 0);
-  /* revela todo o fundo */
+  clip-path: inset(0 0 0 0);  /* revela todo o fundo */
 }
 
 
@@ -515,11 +556,6 @@ nav a:hover::after {
   z-index: 1;
 }
 
-.icons-project a img {
-  width: 4rem;
-  height: 4rem;
-  margin: 0.5rem 1.5rem;
-}
 
 .h2project {
   padding: 1rem;
@@ -558,25 +594,18 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
 .content-text {
   display: flex;
   flex-flow: column wrap;
-  padding: 4rem;
   border-radius: 0 0 1rem 1rem;
   color: white;
   justify-content: center;
   align-items: center;
+  padding: 2rem 4rem;
 }
 
-.icons-links {
-  padding: 0 4rem;
-  margin-top: 1rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: var(--gap);
 
-}
 
 .content-text p {
   font-size: 1.6rem;
+  line-height: 1.5;
   text-align: justify;
   justify-content: center;
   align-items: center;
@@ -591,12 +620,9 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  /* Centraliza os filhos na horizontal */
-  margin: 0 auto;
-  /* Centraliza o contêiner na página */
-  gap: var(--gap);
-  /* Adiciona espaçamento entre os filhos */
+  align-items: center;  /* Centraliza os filhos na horizontal */
+  margin: 0 auto;  /* Centraliza o contêiner na página */
+  gap: var(--gap);  /* Adiciona espaçamento entre os filhos */
   max-width: 100%;
 
 }
@@ -701,7 +727,7 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
   Footer
 =============================*/
 .main-footer {
-  background: var(--primary-color);
+  background: var(--background-gradient);
   min-width: 100%;
   padding: 5rem;
 }
@@ -740,21 +766,13 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
 }
 
 .footer-law {
-  position: relative;
   text-align: center;
   margin-top: 2rem;
 }
 
-.footer-law::before {
-  content: '';
-  position: absolute;
-  bottom: 3rem;
-  width: 100rem;
-  height: 0.1rem;
-  background: var(--color-background);
-  border-radius: 0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+.space-footer{
+  border-top: 0.2rem solid var(--color-background) ;
+  margin: 2rem 0;
 }
 
 
@@ -784,6 +802,9 @@ Configurações de Responsividade
   .section-about {
     height: auto;
   }
+  .section-project{
+    padding: 0 2.4rem;
+  }
 
   .content-about {
     grid-template-columns: 1fr;
@@ -796,6 +817,12 @@ Configurações de Responsividade
 
   .content-project {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* 400px para caber 2 */
+  }
+  .content-text{
+    padding: 0.5rem 1rem;
+  }
+  .icons-links a button{
+    font-size: 1.6rem;
   }
 
   .project-card {
@@ -889,7 +916,7 @@ Configurações de Responsividade
 
   /* Footer */
   .main-footer {
-    background: var(--primary-color);
+    background: var(--background-gradient);
     min-width: 100%;
     padding: 3rem 1rem;
   }
@@ -906,24 +933,19 @@ Configurações de Responsividade
   }
 
   .footer-law {
-    position: relative;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
-  .footer-law::before {
-    content: '';
-    position: absolute;
-    bottom: 4rem;
-    width: 100%;
-    height: 0.1rem;
-    background: var(--color-background);
-    border-radius: 0.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+  .space-footer{
+  border-top: 0.2rem solid var(--color-background) ;
+  margin: 1rem 0;
   }
 
   /* Projetos */
+  .section-project{
+    padding: 0 2.4rem;
+  }
    .content-project {
     grid-template-columns: 1fr !important; /* apenas 1 card por linha */
   }
@@ -932,6 +954,16 @@ Configurações de Responsividade
     height: 350px;
     max-width: 100%;
   }
+  .content-text {
+  display: flex;
+  flex-flow: column wrap;
+  border-radius: 0 0 1rem 1rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  }
+
 
   /* Imagem de perfil menor */
   .img-circular {
@@ -962,10 +994,17 @@ Configurações de Responsividade
    - Ajusta espaçamento geral
 ====================== */
 @media (max-width: 480px) {
+  .section-contact{
+    margin: 3rem 1rem;
+  }
+
   .project-card {
     width: 100%;
-    max-width: 320px; /* ajusta pro celular menor */
-    height: 240px;
+    max-width: 100%; /* ajusta pro celular menor */
+    height: 300px;
+  }
+  .icons-links a button{
+    font-size: 1.6rem;
   }
 
   .intro-text h1 {
@@ -983,12 +1022,36 @@ Configurações de Responsividade
   .sobre-text p {
     font-size: 1.4rem;
   }
+
+  .form-grid{
+    margin: 0 2px;
+  }
+
+  .title-p h2::after {
+  content: '';
+  position: absolute;
+  top: 10rem;
+  height: 0.7rem;
+  width: 40rem;
+  background: var(--primary-color);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+}
+}
+
+@media (max-width: 400px){
+  .section-project{
+    padding: 0 0.6rem;
+  }
+  .project-card{
+    width: 100%;
+    max-width: 100%; /* ajusta pro celular menor */
+    height: 300px;
+  }
 }
 
 /* ======================
    Regra global
    - Esconde o ícone do hamburger em telas grandes
 ====================== */
-.menu .hamburger {
-  display: none; /* padrão: escondido */
-}
