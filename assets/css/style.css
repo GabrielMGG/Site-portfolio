@@ -267,29 +267,33 @@ nav a:hover::after {
   margin-block-end: 1em;
 }
 
-.intro-button button {
-  width: 25rem;
-  height: 5rem;
-  margin-block-start: 5em;
-  margin-block-end: 1em;
+.intro-btn {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
 
-  background-color: var(--primary-color);
-  border-radius: 0.5rem;
+  background-color: #0B2738;
+  border-radius: 5px;
   border: none;
-  box-shadow: 0 0.5rem 0.5rem var(--second-color);
+  box-shadow: 0 5px 5px rgba(64, 90, 104, 0.7);
 
-  /*config do texto*/
-  font-size: 2rem;
   padding: 1rem;
+  margin-top: 2rem;
+
+  font-size: 2rem;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
-  color: var(--text-second-color);
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.3s ease;
 }
 
-.intro-button button:hover {
-  color: var(--third-color);
-  cursor: pointer;
+.intro-btn:hover {
+  color: #97A6AF;
+  background-color: #0a2233;
+  transform: translateY(-2px);
 }
 
 
@@ -617,6 +621,29 @@ O context-text faz as configurações do titulo, texto e da lista que ficam na g
   align-items: center;
 }
 
+.btn{
+  display: inline-block;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0.1rem 0.3rem var(--color-background);
+  font-size: 2rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--text-second-color);
+  text-align: center;
+  cursor: pointer;
+  width: 25rem;
+  height: 5rem;
+}
+
+.btn:hover {
+  color: var(--third-color);
+  cursor: pointer;
+}
+
 
 
 /*=============================
@@ -932,7 +959,7 @@ nav ul {
   }
 
   /*botao da introduçao*/
-  .intro-button button {
+  .intro-btn button {
     width: 80%;
   }
 
@@ -1118,8 +1145,3 @@ nav ul {
     height: 300px;
   }
 }
-
-/* ======================
-   Regra global
-   - Esconde o ícone do hamburger em telas grandes
-====================== */
